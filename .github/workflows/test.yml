@@ -20,10 +20,12 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Install Foundry
+      - name: Set up Foundry toolchain
         uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: latest  # Ensure you are using the latest version of Foundry
 
-      - name: Show Forge version
+      - name: Verify Forge installation
         run: |
           forge --version
 
